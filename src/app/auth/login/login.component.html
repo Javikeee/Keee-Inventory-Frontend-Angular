@@ -1,0 +1,28 @@
+<h1>bbbbb</h1>
+<div class="login-container">
+  <mat-card class="login-card">
+    <h2>Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" type="email" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password" />
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="full-width">Login</button>
+    </form>
+
+    <div class="or-separator">OR</div>
+
+    <button mat-raised-button color="accent" class="full-width" (click)="loginWithGoogle()">
+      Login with Google
+    </button>
+    <button mat-raised-button color="warn" class="full-width" (click)="loginWithAzure()">
+      Login with Azure
+    </button>
+  </mat-card>
+</div>
