@@ -65,4 +65,3 @@ Todo para:
 -Crear vistas reutilizables y modulares.
 -Gestionar la lógica y los datos específicos de una parte de la UI.
 -Encapsular la funcionalidad para mantener el código organizado.
-a

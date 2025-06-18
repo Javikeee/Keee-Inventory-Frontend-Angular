@@ -5,6 +5,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -23,7 +24,7 @@ import { CommonModule } from '@angular/common';
 export class LoginComponent {
   loginForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
@@ -33,15 +34,17 @@ export class LoginComponent {
   onSubmit() {
     if (this.loginForm.valid) {
       console.log('Login with:', this.loginForm.value);
-      // Aquí simularías login o navegación al dashboard
+        this.router.navigate(['/dashboard']);
     }
   }
 
   loginWithGoogle() {
     console.log('Login with Google');
+    this.router.navigate(['/dashboard']);
   }
 
   loginWithAzure() {
     console.log('Login with Azure');
+      this.router.navigate(['/dashboard']);
   }
 }

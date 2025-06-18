@@ -1,0 +1,41 @@
+<aside class="sidebar" [class.closed]="!isVisible">
+  <div class="sidebar-scrollable">
+    <div class="sidebar-top">
+      <h3>Keee Inventory</h3>
+
+      <nav class="nav-links">
+        <a class="nav-item">
+          <span class="material-icons">person</span>
+          <span>Perfil</span>
+        </a>
+        <a class="nav-item">
+          <span class="material-icons">notifications</span>
+          <span>Notificaciones</span>
+        </a>
+        <a class="nav-item">
+          <span class="material-icons">mail</span>
+          <span>Contactar</span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="sidebar-bottom">
+      <img src="https://i.pravatar.cc/300" alt="Avatar" class="avatar" />
+      <div class="user-info">
+        <strong>Prueba de aplicación</strong>
+        <small>prueba&#64;hotmail.com</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón para mostrar u ocultar el menú -->
+  <button
+    class="toggle-button"
+    (click)="toggleSidebar()"
+    [ngClass]="{ 'show': !isVisible, 'hide': isVisible }"
+  >
+    <span class="material-icons">
+      {{ isVisible ? 'chevron_left' : 'chevron_right' }}
+    </span>
+  </button>
+</aside>
