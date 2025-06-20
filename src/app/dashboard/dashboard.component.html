@@ -1,12 +1,7 @@
-<div class="dashboard-container">
-    <app-sidebar></app-sidebar>
+<button mat-raised-button color="primary" routerLink="/dashboard/sales-history">Historial de ventas</button>
+<button mat-raised-button color="accent" routerLink="/dashboard/user-management">Gestión de usuarios</button>
+<button mat-raised-button color="warn" routerLink="/dashboard/product-list">Ir a lista de productos</button>
 
-  <main class="dashboard-content">
-    <button mat-raised-button color="primary" class="dashboard-button" routerLink="/dashboard/sales-history">
-      Historial de ventas
-    </button>
-    <button mat-raised-button color="accent" class="dashboard-button" routerLink="/dashboard/user-management">
-      Gestión de usuarios
-    </button>
-  </main>
+<div class="main-content">
+  <router-outlet></router-outlet>
 </div>

@@ -65,3 +65,14 @@ Todo para:
 -Crear vistas reutilizables y modulares.
 -Gestionar la lógica y los datos específicos de una parte de la UI.
 -Encapsular la funcionalidad para mantener el código organizado.
+
+## Jerarquia de enrutamiento
+
+MainLayoutComponent
+├── SidebarComponent
+└── router-outlet
+     └── DashboardComponent
+         └── router-outlet
+             ├── ProductListComponent
+             ├── SalesHistoryComponent
+             └── UserManagementComponent

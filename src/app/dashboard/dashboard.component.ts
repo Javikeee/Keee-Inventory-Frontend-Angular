@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from '../shared/sidebar/sidebar.component';
@@ -17,5 +17,6 @@ import { SidebarComponent } from '../shared/sidebar/sidebar.component';
 })
 
 export class DashboardComponent {
+  constructor(private router: Router) {}
 
 }
