@@ -1,1 +1,11 @@
-<p>sales-history works!</p>
+<h1>Historial de Pedidos</h1>
+
+<div *ngFor="let order of orders" class="order-card" [ngClass]="{ 'sale': order.isSale, 'purchase': !order.isSale }" (click)="openDetails(order)">
+  <mat-card>
+    <mat-card-title>{{ order.id }} - {{ order.date }}</mat-card-title>
+    <mat-card-content>
+      <p><strong>Comprador:</strong> {{ order.buyer }}</p>
+      <p><strong>Vendedor:</strong> {{ order.seller }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,42 @@
+.order-card {
+  margin-bottom: 16px;
+  cursor: pointer;
+
+  &.sale mat-card {
+    border-left: 6px solid #4caf50; // verde
+    background-color: #e8f5e9;
+  }
+
+  &.purchase mat-card {
+    border-left: 6px solid #2196f3; // azul
+    background-color: #e3f2fd;
+  }
+
+  mat-card {
+    transition: box-shadow 0.3s;
+    &:hover {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+.order-card {
+  margin-bottom: 16px;
+  cursor: pointer;
+
+  &.sale mat-card {
+    border-left: 6px solid #4caf50; // verde
+    background-color: #e8f5e9;
+  }
+
+  &.purchase mat-card {
+    border-left: 6px solid #2196f3; // azul
+    background-color: #e3f2fd;
+  }
+
+  mat-card {
+    transition: box-shadow 0.3s;
+    &:hover {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
